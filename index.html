@@ -5,7 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Aura & Mesa | Decoración de Mesas de Lujo y Eventos Exclusivos</title>
     <meta name="description" content="Estudio de alta costura en decoración efímera y estilismo de mesas para bodas de alto standing y eventos exclusivos.">
-    <!-- Google Fonts: Cormorant Garamond & Montserrat -->
+    <!-- Google Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
@@ -13,19 +13,22 @@
 </head>
 <body>
 
-    <!-- Header Fijo / Minimalista con soporte Responsive -->
+    <!-- Cursor Personalizado de Alta Gama (Solo Desktop) -->
+    <div class="custom-cursor" id="cursor"></div>
+
+    <!-- Header Fijo / Minimalista -->
     <header class="site-header">
         <div class="header-container">
             <a href="#" class="brand-logo">AURA & MESA</a>
             
             <nav class="nav-links" id="navLinks">
-                <a href="#servicios">Servicios</a>
-                <a href="#experiencias">Experiencias</a>
-                <a href="#portafolio">Portafolio</a>
-                <a href="#contacto" class="nav-cta">Contacto Privado</a>
+                <a href="#servicios" class="hover-target">Servicios</a>
+                <a href="#experiencias" class="hover-target">Experiencias</a>
+                <a href="#portafolio" class="hover-target">Portafolio</a>
+                <a href="#contacto" class="nav-cta hover-target">Contacto Privado</a>
             </nav>
 
-            <button class="mobile-menu-btn" id="menuBtn" aria-label="Abrir menú de navegación">
+            <button class="mobile-menu-btn hover-target" id="menuBtn" aria-label="Abrir menú de navegación">
                 <span class="bar"></span>
                 <span class="bar"></span>
             </button>
@@ -34,31 +37,31 @@
 
     <!-- Sección Hero -->
     <section class="hero-section">
-        <div class="hero-content">
+        <div class="hero-content reveal">
             <span class="hero-subtitle">Alta Costura en Decoración Efímera</span>
             <h1>Transformamos tus celebraciones en experiencias memorables</h1>
             <p>Diseñamos mesas de alta gama para bodas de alto standing, eventos corporativos selectos y celebraciones privadas donde cada detalle cuenta una historia irrepetible.</p>
             <div class="hero-buttons">
-                <a href="https://wa.me/34000000000?text=Hola,%20deseo%20solicitar%20información%20sobre%20sus%20servicios%20de%20decoración%20de%20mesas%20de%20lujo." target="_blank" rel="noopener noreferrer" class="btn-primary">
+                <a href="https://wa.me/34000000000?text=Hola,%20deseo%20solicitar%20información%20sobre%20sus%20servicios%20de%20decoración%20de%20mesas%20de%20lujo." target="_blank" rel="noopener noreferrer" class="btn-primary hover-target">
                     Reservar asesoría privada
                 </a>
-                <a href="#servicios" class="btn-secondary">Explorar colecciones</a>
+                <a href="#servicios" class="btn-secondary hover-target">Explorar colecciones</a>
             </div>
         </div>
     </section>
 
-    <!-- Sección Colecciones / Servicios -->
+    <!-- Sección Colecciones / Servicios (Estilo Editorial Asimétrico) -->
     <section id="servicios" class="services-section">
-        <div class="section-header">
+        <div class="section-header reveal">
             <span class="section-tag">Colecciones Exclusivas</span>
             <h2>Estética comisariada para momentos únicos</h2>
             <p>Cada propuesta se diseña a medida, fusionando el arte de la alta decoración floral, vajilla de autor y textiles de lino puro.</p>
         </div>
 
         <div class="services-grid">
-            <article class="service-card">
+            <article class="service-card reveal">
                 <div class="card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80" alt="Minimalismo Orgánico en decoración de mesa" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80" alt="Minimalismo Orgánico" loading="lazy">
                 </div>
                 <div class="card-body">
                     <h3>Minimalismo Orgánico</h3>
@@ -67,9 +70,9 @@
                 </div>
             </article>
 
-            <article class="service-card">
+            <article class="service-card reveal">
                 <div class="card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80" alt="Romántico Clásico en vajilla y arreglos florales" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80" alt="Romántico Clásico" loading="lazy">
                 </div>
                 <div class="card-body">
                     <h3>Romántico Clásico</h3>
@@ -78,9 +81,9 @@
                 </div>
             </article>
 
-            <article class="service-card">
+            <article class="service-card reveal">
                 <div class="card-image-wrapper">
-                    <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80" alt="Vanguardista Escultural para eventos selectos" loading="lazy">
+                    <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80" alt="Vanguardista Escultural" loading="lazy">
                 </div>
                 <div class="card-body">
                     <h3>Vanguardista Escultural</h3>
@@ -94,7 +97,7 @@
     <!-- Sección Experiencias / Filosofía -->
     <section id="experiencias" class="experience-section">
         <div class="experience-container">
-            <div class="experience-text">
+            <div class="experience-text reveal">
                 <span class="section-tag">El Arte del Detalle</span>
                 <h2>Una experiencia sensorial sin concesiones</h2>
                 <p>No decoramos mesas; creamos atmósferas envolventes donde el tacto del lino belga, el brillo sutil de la plata y el aroma de las composiciones florales despiertan los sentidos de tus invitados desde el primer instante.</p>
@@ -109,26 +112,26 @@
                     </div>
                 </div>
             </div>
-            <div class="experience-image">
-                <img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=900&q=80" alt="Detalle de alta mesa de lujo" loading="lazy">
+            <div class="experience-image reveal">
+                <img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=900&q=80" alt="Detalle de mesa de lujo" loading="lazy">
             </div>
         </div>
     </section>
 
     <!-- Sección Portafolio / Galería Visual -->
     <section id="portafolio" class="portfolio-section">
-        <div class="section-header">
+        <div class="section-header reveal">
             <span class="section-tag">Galería Visual</span>
             <h2>Instantes perpetuados en el tiempo</h2>
         </div>
         <div class="portfolio-grid">
-            <div class="portfolio-item">
+            <div class="portfolio-item reveal">
                 <img src="https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=800&q=80" alt="Mesa evento exclusivo 1" loading="lazy">
             </div>
-            <div class="portfolio-item">
+            <div class="portfolio-item reveal">
                 <img src="https://images.unsplash.com/photo-1478144592103-25e218a04891?auto=format&fit=crop&w=800&q=80" alt="Mesa evento exclusivo 2" loading="lazy">
             </div>
-            <div class="portfolio-item">
+            <div class="portfolio-item reveal">
                 <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=800&q=80" alt="Mesa evento exclusivo 3" loading="lazy">
             </div>
         </div>
@@ -136,10 +139,10 @@
 
     <!-- Sección de Contacto / CTA Final -->
     <section id="contacto" class="cta-section">
-        <div class="cta-container">
+        <div class="cta-container reveal">
             <h2>Comience a dar forma a su próxima celebración</h2>
             <p>Atendemos un número muy limitado de proyectos al año para garantizar la máxima excelencia artística y exclusividad en cada montaje.</p>
-            <a href="https://wa.me/34000000000?text=Hola,%20deseo%20solicitar%20información%20sobre%20sus%20servicios%20de%20decoración%20de%20mesas%20de%20lujo." target="_blank" rel="noopener noreferrer" class="btn-primary">
+            <a href="https://wa.me/34000000000?text=Hola,%20deseo%20solicitar%20información%20sobre%20sus%20servicios%20de%20decoración%20de%20mesas%20de%20lujo." target="_blank" rel="noopener noreferrer" class="btn-primary hover-target">
                 Reservar asesoría privada por WhatsApp
             </a>
         </div>
@@ -153,9 +156,9 @@
                 <p>Estudio de decoración y estilismo de mesas para eventos exclusivos.</p>
             </div>
             <div class="footer-social">
-                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" aria-label="Instagram">Instagram</a>
-                <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" aria-label="Pinterest">Pinterest</a>
-                <a href="mailto:concierge@aura-mesa.com" aria-label="Correo electrónico">Concierge</a>
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer" class="hover-target" aria-label="Instagram">Instagram</a>
+                <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer" class="hover-target" aria-label="Pinterest">Pinterest</a>
+                <a href="mailto:concierge@aura-mesa.com" class="hover-target" aria-label="Correo electrónico">Concierge</a>
             </div>
         </div>
         <div class="footer-bottom">
@@ -163,8 +166,9 @@
         </div>
     </footer>
 
-    <!-- Script para control de menú móvil -->
+    <!-- Script Interactivo de Alta Gama (Cursor y Scroll Reveal) -->
     <script>
+        // Menú móvil
         const menuBtn = document.getElementById('menuBtn');
         const navLinks = document.getElementById('navLinks');
 
@@ -173,12 +177,43 @@
             navLinks.classList.toggle('active');
         });
 
-        // Cerrar menú al hacer clic en un enlace (móvil)
         document.querySelectorAll('.nav-links a').forEach(link => {
             link.addEventListener('click', () => {
                 menuBtn.classList.remove('active');
                 navLinks.classList.remove('active');
             });
+        });
+
+        // Cursor personalizado interactivo
+        const cursor = document.getElementById('cursor');
+        const hoverTargets = document.querySelectorAll('.hover-target, a, button');
+
+        window.addEventListener('mousemove', (e) => {
+            cursor.style.transform = `translate3d(${e.clientX}px, ${e.clientY}px, 0)`;
+        });
+
+        hoverTargets.forEach(target => {
+            target.addEventListener('mouseenter', () => cursor.classList.add('hovered'));
+            target.addEventListener('mouseleave', () => cursor.classList.remove('hovered'));
+        });
+
+        // Scroll Reveal Animation (Observer)
+        const observerOptions = {
+            threshold: 0.15,
+            rootMargin: '0px 0px -50px 0px'
+        };
+
+        const observer = new IntersectionObserver((entries, observer) => {
+            entries.forEach(entry => {
+                if (entry.isIntersecting) {
+                    entry.target.classList.add('active');
+                    observer.unobserve(entry.target);
+                }
+            });
+        }, observerOptions);
+
+        document.querySelectorAll('.reveal').forEach(el => {
+            observer.observe(el);
         });
     </script>
 </body>
