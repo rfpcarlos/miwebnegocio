@@ -1,59 +1,167 @@
 <!DOCTYPE html>
 <html lang="es">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Mi Negocio - Bienvenido</title>
-  <link rel="stylesheet" href="style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Aura & Mesa | Decoración de Mesas de Lujo para Eventos Exclusivos</title>
+    <!-- Google Fonts: Cormorant Garamond (Serif) & Montserrat (Sans-Serif) -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,300;0,400;0,500;0,600;1,400&family=Montserrat:wght@300;400;500;600&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-  <!-- Encabezado / Menú -->
-  <header>
-    <div class="logo">Mi Negocio</div>
-    <nav>
-      <a href="#servicios">Servicios</a>
-      <a href="#galeria">Catálogo</a>
-      <a href="#contacto">Contacto</a>
-    </nav>
-  </header>
+    <!-- Header Fijo / Minimalista -->
+    <header class="site-header">
+        <div class="header-container">
+            <a href="#" class="brand-logo">AURA & MESA</a>
+            <nav class="nav-links">
+                <a href="#servicios">Servicios</a>
+                <a href="#experiencias">Experiencias</a>
+                <a href="#portafolio">Portafolio</a>
+                <a href="#contacto" class="nav-cta">Contacto Privado</a>
+            </nav>
+            <div class="mobile-menu-btn" aria-label="Menú">
+                <span></span>
+                <span></span>
+            </div>
+        </div>
+    </header>
 
-  <!-- Sección Principal (Hero) -->
-  <section class="hero">
-    <h1>Bienvenido a Mi Negocio</h1>
-    <p>Ofrecemos los mejores productos/servicios con la mejor calidad.</p>
-    <a href="https://wa.me/tuNumeroDeTelefono" class="btn-primary" target="_blank">Pedir por WhatsApp</a>
-  </section>
+    <!-- Sección Hero -->
+    <section class="hero-section">
+        <div class="hero-content">
+            <span class="hero-subtitle">Alta Costura en Decoración Efímera</span>
+            <h1>Transformamos tus celebraciones en experiencias memorables</h1>
+            <p>Diseñamos mesas de alta gama para bodas de alto standing, eventos corporativos selectos y celebraciones privadas donde cada detalle cuenta una historia irrepetible.</p>
+            <div class="hero-buttons">
+                <a href="https://wa.me/34000000000?text=Hola,%20deseo%20solicitar%20información%20sobre%20sus%20servicios%20de%20decoración%20de%20mesas%20de%20lujo." target="_blank" rel="noopener noreferrer" class="btn-primary">
+                    Reservar asesoría privada
+                </a>
+                <a href="#servicios" class="btn-secondary">Explorar colecciones</a>
+            </div>
+        </div>
+    </section>
 
-  <!-- Sección de Servicios/Productos -->
-  <section id="servicios" class="container">
-    <h2>Nuestros Servicios</h2>
-    <div class="grid">
-      <div class="card">
-        <h3>Servicio 1</h3>
-        <p>Descripción breve de lo que ofreces.</p>
-      </div>
-      <div class="card">
-        <h3>Servicio 2</h3>
-        <p>Descripción breve de lo que ofreces.</p>
-      </div>
-      <div class="card">
-        <h3>Servicio 3</h3>
-        <p>Descripción breve de lo que ofreces.</p>
-      </div>
-    </div>
-  </section>
+    <!-- Sección Colecciones / Servicios -->
+    <section id="servicios" class="services-section">
+        <div class="section-header">
+            <span class="section-tag">Colecciones Exclusivas</span>
+            <h2>Estética comisariada para momentos únicos</h2>
+            <p>Cada propuesta se diseña a medida, fusionando el arte de la alta decoración floral, vajilla de autor y textiles de lino puro.</p>
+        </div>
 
-  <!-- Sección de Contacto -->
-  <section id="contacto" class="container">
-    <h2>Contacto</h2>
-    <p>¿Tienes dudas? Escríbenos directamente o visítanos en Instagram.</p>
-    <a href="https://instagram.com/tuUsuario" class="btn-secondary" target="_blank">Ver Instagram</a>
-  </section>
+        <div class="services-grid">
+            <!-- Tarjeta 1 -->
+            <article class="service-card">
+                <div class="card-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=800&q=80" alt="Minimalismo Orgánico" loading="lazy">
+                </div>
+                <div class="card-body">
+                    <h3>Minimalismo Orgánico</h3>
+                    <p>Líneas puras, paletas neutras, elementos botánicos silvestres y una iluminación cálida que prioriza la atmósfera y la sutileza.</p>
+                    <span class="card-detail">Bodas íntimas & cenas de gala</span>
+                </div>
+            </article>
 
-  <footer>
-    <p>&copy; 2026 Mi Negocio - Todos los derechos reservados.</p>
-  </footer>
+            <!-- Tarjeta 2 -->
+            <article class="service-card">
+                <div class="card-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1511795409834-ef04bbd61622?auto=format&fit=crop&w=800&q=80" alt="Romántico Clásico" loading="lazy">
+                </div>
+                <div class="card-body">
+                    <h3>Romántico Clásico</h3>
+                    <p>Porcelana fina con detalles en oro envejecido, cristalería tallada a mano y densos arreglos florales de inspiración renacentista.</p>
+                    <span class="card-detail">Bodas de alta gama & aniversarios</span>
+                </div>
+            </article>
+
+            <!-- Tarjeta 3 -->
+            <article class="service-card">
+                <div class="card-image-wrapper">
+                    <img src="https://images.unsplash.com/photo-1465495976277-4387d4b0b4c6?auto=format&fit=crop&w=800&q=80" alt="Vanguardista Escultural" loading="lazy">
+                </div>
+                <div class="card-body">
+                    <h3>Vanguardista Escultural</h3>
+                    <p>Instalaciones aéreas, geometrías modernas, juegos de texturas metálicas y vajillas de diseño contemporáneo para marcas exclusivas.</p>
+                    <span class="card-detail">Eventos corporativos & launches</span>
+                </div>
+            </article>
+        </div>
+    </section>
+
+    <!-- Sección Experiencias / Filosofía (Prueba Social y Detalle) -->
+    <section id="experiencias" class="experience-section">
+        <div class="experience-container">
+            <div class="experience-text">
+                <span class="section-tag">El Arte del Detalle</span>
+                <h2>Una experiencia sensorial sin concesiones</h2>
+                <p>No decoramos mesas; creamos atmósferas envolventes donde el tacto del lino belga, el brillo sutil de la plata y el aroma de las composiciones florales despiertan los sentidos de tus invitados desde el primer instante.</p>
+                <div class="stats-grid">
+                    <div class="stat-item">
+                        <span class="stat-number">+150</span>
+                        <span class="stat-label">Eventos de Alta Costura</span>
+                    </div>
+                    <div class="stat-item">
+                        <span class="stat-number">100%</span>
+                        <span class="stat-label">Diseños Personalizados</span>
+                    </div>
+                </div>
+            </div>
+            <div class="experience-image">
+                <img src="https://images.unsplash.com/photo-1532712938310-34cb3982ef74?auto=format&fit=crop&w=900&q=80" alt="Detalle de mesa de lujo" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección Portafolio / Galería Visual -->
+    <section id="portafolio" class="portfolio-section">
+        <div class="section-header">
+            <span class="section-tag">Galería Visual</span>
+            <h2>Instantes perpetuados en el tiempo</h2>
+        </div>
+        <div class="portfolio-grid">
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1507035895480-2b3156c31fc8?auto=format&fit=crop&w=800&q=80" alt="Mesa evento exclusivo 1" loading="lazy">
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1478144592103-25e218a04891?auto=format&fit=crop&w=800&q=80" alt="Mesa evento exclusivo 2" loading="lazy">
+            </div>
+            <div class="portfolio-item">
+                <img src="https://images.unsplash.com/photo-1527529482837-4698179dc6ce?auto=format&fit=crop&w=800&q=80" alt="Mesa evento exclusivo 3" loading="lazy">
+            </div>
+        </div>
+    </section>
+
+    <!-- Sección de Contacto / CTA Final -->
+    <section id="contacto" class="cta-section">
+        <div class="cta-container">
+            <h2>Comience a dar forma a su próxima celebración</h2>
+            <p>Atendemos un número muy limitado de proyectos al año para garantizar la máxima excelencia artística y exclusividad en cada montaje.</p>
+            <a href="https://wa.me/34000000000?text=Hola,%20deseo%20solicitar%20información%20sobre%20sus%20servicios%20de%20decoración%20de%20mesas%20de%20lujo." target="_blank" rel="noopener noreferrer" class="btn-primary">
+                Reservar asesoría privada por WhatsApp
+            </a>
+        </div>
+    </section>
+
+    <!-- Pie de Página -->
+    <footer class="site-footer">
+        <div class="footer-container">
+            <div class="footer-brand">
+                <span class="brand-logo">AURA & MESA</span>
+                <p>Estudio de decoración y estilismo de mesas para eventos exclusivos.</p>
+            </div>
+            <div class="footer-social">
+                <a href="https://instagram.com" target="_blank" rel="noopener noreferrer">Instagram</a>
+                <a href="https://pinterest.com" target="_blank" rel="noopener noreferrer">Pinterest</a>
+                <a href="mailto:concierge@aura-mesa.com">Concierge</a>
+            </div>
+        </div>
+        <div class="footer-bottom">
+            <p>&copy; 2026 Aura & Mesa. Todos los derechos reservados.</p>
+        </div>
+    </footer>
 
 </body>
 </html>
