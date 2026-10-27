@@ -1,96 +1,506 @@
-/* Reset básico */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* ==========================================================================
+   Variables y Configuración Global (Quiet Luxury Aesthetic)
+   ========================================================================== */
+:root {
+    --bg-color: #FBF9F5;
+    --card-bg: #FFFFFF;
+    --text-primary: #1A1A1A;
+    --text-secondary: #66635D;
+    --accent-color: #8C7B65;
+    --accent-hover: #756551;
+    --border-color: #EAE5DC;
+    
+    --font-serif: 'Cormorant Garamond', serif;
+    --font-sans: 'Montserrat', sans-serif;
+    
+    --transition-smooth: all 0.4s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+*, *::before, *::after {
+    box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    scroll-behavior: smooth;
 }
 
 body {
-  color: #333;
-  background-color: #f9f9f9;
+    background-color: var(--bg-color);
+    color: var(--text-primary);
+    font-family: var(--font-sans);
+    font-size: 1rem;
+    line-height: 1.7;
+    font-weight: 300;
+    -webkit-font-smoothing: antialiased;
 }
 
-header {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  padding: 20px 10%;
-  background-color: #fff;
-  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+h1, h2, h3, h4 {
+    font-family: var(--font-serif);
+    font-weight: 400;
+    color: var(--text-primary);
 }
 
-.logo {
-  font-weight: bold;
-  font-size: 1.5rem;
-  color: #111;
+a {
+    text-decoration: none;
+    color: inherit;
+    transition: var(--transition-smooth);
 }
 
-nav a {
-  margin-left: 20px;
-  text-decoration: none;
-  color: #555;
-  font-weight: 500;
+ul {
+    list-style: none;
 }
 
-.hero {
-  text-align: center;
-  padding: 80px 20px;
-  background: linear-gradient(135deg, #6e8efb, #a777e3);
-  color: white;
+img {
+    max-width: 100%;
+    height: auto;
+    display: block;
 }
 
-.hero h1 {
-  font-size: 2.5rem;
-  margin-bottom: 15px;
+/* ==========================================================================
+   Header Fijo / Minimalista
+   ========================================================================== */
+.site-header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    background-color: rgba(251, 249, 245, 0.9);
+    backdrop-filter: blur(10px);
+    z-index: 1000;
+    border-bottom: 1px solid var(--border-color);
 }
 
-.hero p {
-  font-size: 1.2rem;
-  margin-bottom: 25px;
+.header-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding: 1.5rem 2rem;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
-.container {
-  padding: 60px 10%;
-  text-align: center;
+.brand-logo {
+    font-family: var(--font-serif);
+    font-size: 1.4rem;
+    letter-spacing: 0.25em;
+    font-weight: 500;
+    color: var(--text-primary);
 }
 
-.grid {
-  display: grid;
-  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-  gap: 20px;
-  margin-top: 30px;
+.nav-links {
+    display: flex;
+    gap: 2.5rem;
+    align-items: center;
 }
 
-.card {
-  background: white;
-  padding: 25px;
-  border-radius: 10px;
-  box-shadow: 0 4px 6px rgba(0,0,0,0.05);
+.nav-links a {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.12em;
+    color: var(--text-secondary);
 }
 
-.btn-primary, .btn-secondary {
-  display: inline-block;
-  padding: 12px 25px;
-  border-radius: 25px;
-  text-decoration: none;
-  font-weight: bold;
+.nav-links a:hover {
+    color: var(--text-primary);
 }
 
+.nav-cta {
+    padding: 0.6rem 1.2rem;
+    border: 1px solid var(--accent-color);
+    color: var(--accent-color) !important;
+    border-radius: 0;
+}
+
+.nav-cta:hover {
+    background-color: var(--accent-color);
+    color: #FFFFFF !important;
+}
+
+/* ==========================================================================
+   Sección Hero
+   ========================================================================== */
+.hero-section {
+    min-height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+    padding: 8rem 2rem 4rem;
+    background: linear-gradient(rgba(251, 249, 245, 0.5), rgba(251, 249, 245, 0.8)), 
+                url('https://images.unsplash.com/photo-1519225421980-715cb0215aed?auto=format&fit=crop&w=1920&q=85') no-repeat center center/cover;
+}
+
+.hero-content {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.hero-subtitle {
+    display: inline-block;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: var(--accent-color);
+    margin-bottom: 1.5rem;
+    font-weight: 500;
+}
+
+.hero-content h1 {
+    font-size: clamp(2.5rem, 5vw, 4.2rem);
+    line-height: 1.15;
+    margin-bottom: 1.5rem;
+    letter-spacing: -0.01em;
+}
+
+.hero-content p {
+    font-size: 1.1rem;
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+    max-width: 650px;
+    margin-left: auto;
+    margin-right: auto;
+}
+
+.hero-buttons {
+    display: flex;
+    gap: 1.2rem;
+    justify-content: center;
+    flex-wrap: wrap;
+}
+
+/* Botones de Estilo Premium */
 .btn-primary {
-  background-color: #25D366; /* Verde WhatsApp */
-  color: white;
+    background-color: var(--text-primary);
+    color: #FFFFFF;
+    padding: 1rem 2.2rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    border-radius: 0;
+    transition: var(--transition-smooth);
+}
+
+.btn-primary:hover {
+    background-color: var(--accent-color);
 }
 
 .btn-secondary {
-  background-color: #E1306C; /* Rosa Instagram */
-  color: white;
+    background-color: transparent;
+    color: var(--text-primary);
+    border: 1px solid var(--border-color);
+    padding: 1rem 2.2rem;
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    transition: var(--transition-smooth);
 }
 
-footer {
-  text-align: center;
-  padding: 20px;
-  background: #222;
-  color: #fff;
-  font-size: 0.9rem;
+.btn-secondary:hover {
+    border-color: var(--text-primary);
+}
+
+/* ==========================================================================
+   Sección Servicios / Colecciones
+   ========================================================================== */
+.services-section {
+    padding: 7rem 2rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.section-header {
+    text-align: center;
+    max-width: 700px;
+    margin: 0 auto 5rem;
+}
+
+.section-tag {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.3em;
+    color: var(--accent-color);
+    display: block;
+    margin-bottom: 1rem;
+    font-weight: 600;
+}
+
+.section-header h2 {
+    font-size: clamp(2rem, 3.5vw, 3rem);
+    margin-bottom: 1rem;
+}
+
+.section-header p {
+    color: var(--text-secondary);
+}
+
+.services-grid {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
+    gap: 2.5rem;
+}
+
+.service-card {
+    background-color: var(--card-bg);
+    border: 1px solid var(--border-color);
+    transition: var(--transition-smooth);
+    overflow: hidden;
+}
+
+.service-card:hover {
+    transform: translateY(-6px);
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.04);
+}
+
+.card-image-wrapper {
+    height: 380px;
+    overflow: hidden;
+}
+
+.card-image-wrapper img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s cubic-bezier(0.16, 1, 0.3, 1);
+}
+
+.service-card:hover .card-image-wrapper img {
+    transform: scale(1.05);
+}
+
+.card-body {
+    padding: 2.5rem;
+}
+
+.card-body h3 {
+    font-size: 1.6rem;
+    margin-bottom: 0.8rem;
+}
+
+.card-body p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-bottom: 1.5rem;
+}
+
+.card-detail {
+    font-size: 0.75rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: var(--accent-color);
+    font-weight: 500;
+}
+
+/* ==========================================================================
+   Sección Experiencias / Filosofía
+   ========================================================================== */
+.experience-section {
+    background-color: #F5F2EC;
+    padding: 8rem 2rem;
+}
+
+.experience-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 5rem;
+    align-items: center;
+}
+
+.experience-text .section-tag {
+    text-align: left;
+}
+
+.experience-text h2 {
+    font-size: clamp(2rem, 3vw, 2.8rem);
+    margin-bottom: 1.5rem;
+}
+
+.experience-text p {
+    color: var(--text-secondary);
+    margin-bottom: 2.5rem;
+}
+
+.stats-grid {
+    display: flex;
+    gap: 3rem;
+}
+
+.stat-item .stat-number {
+    font-family: var(--font-serif);
+    font-size: 2.8rem;
+    color: var(--accent-color);
+    display: block;
+    line-height: 1;
+    margin-bottom: 0.5rem;
+}
+
+.stat-item .stat-label {
+    font-size: 0.8rem;
+    text-transform: uppercase;
+    letter-spacing: 0.1em;
+    color: var(--text-secondary);
+}
+
+.experience-image img {
+    width: 100%;
+    height: 550px;
+    object-fit: cover;
+}
+
+/* ==========================================================================
+   Portafolio / Galería Visual
+   ========================================================================== */
+.portfolio-section {
+    padding: 7rem 2rem;
+    max-width: 1300px;
+    margin: 0 auto;
+}
+
+.portfolio-grid {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 1.5rem;
+}
+
+.portfolio-item {
+    height: 420px;
+    overflow: hidden;
+}
+
+.portfolio-item img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    transition: transform 0.8s ease;
+}
+
+.portfolio-item:hover img {
+    transform: scale(1.04);
+}
+
+/* ==========================================================================
+   CTA Sección Final
+   ========================================================================== */
+.cta-section {
+    padding: 8rem 2rem;
+    background-color: var(--text-primary);
+    color: #FFFFFF;
+    text-align: center;
+}
+
+.cta-container {
+    max-width: 700px;
+    margin: 0 auto;
+}
+
+.cta-container h2 {
+    color: #FFFFFF;
+    font-size: clamp(2.2rem, 4vw, 3.2rem);
+    margin-bottom: 1.2rem;
+}
+
+.cta-container p {
+    color: #A09B93;
+    margin-bottom: 2.5rem;
+    font-size: 1.05rem;
+}
+
+.cta-container .btn-primary {
+    background-color: #FFFFFF;
+    color: var(--text-primary);
+}
+
+.cta-container .btn-primary:hover {
+    background-color: var(--accent-color);
+    color: #FFFFFF;
+}
+
+/* ==========================================================================
+   Pie de Página
+   ========================================================================== */
+.site-footer {
+    background-color: #121212;
+    color: #A09B93;
+    padding: 5rem 2rem 2rem;
+    border-top: 1px solid rgba(255, 255, 255, 0.05);
+}
+
+.footer-container {
+    max-width: 1300px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    padding-bottom: 4rem;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.08);
+}
+
+.footer-brand .brand-logo {
+    color: #FFFFFF;
+    margin-bottom: 1rem;
+    display: inline-block;
+}
+
+.footer-brand p {
+    font-size: 0.9rem;
+}
+
+.footer-social {
+    display: flex;
+    gap: 2rem;
+}
+
+.footer-social a {
+    font-size: 0.85rem;
+    text-transform: uppercase;
+    letter-spacing: 0.15em;
+    color: #FFFFFF;
+}
+
+.footer-social a:hover {
+    color: var(--accent-color);
+}
+
+.footer-bottom {
+    max-width: 1300px;
+    margin: 0 auto;
+    padding-top: 2rem;
+    text-align: center;
+    font-size: 0.8rem;
+}
+
+/* ==========================================================================
+   Responsive Design (Media Queries)
+   ========================================================================== */
+@media (max-width: 968px) {
+    .experience-container {
+        grid-template-columns: 1fr;
+        gap: 3rem;
+    }
+    
+    .portfolio-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .portfolio-item {
+        height: 350px;
+    }
+    
+    .nav-links {
+        display: none; /* Implementación limpia mobile estándar */
+    }
+}
+
+@media (max-width: 768px) {
+    .services-grid {
+        grid-template-columns: 1fr;
+    }
+    
+    .footer-container {
+        flex-direction: column;
+        gap: 2.5rem;
+    }
 }
